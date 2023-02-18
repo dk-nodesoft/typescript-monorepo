@@ -1,0 +1,27 @@
+{
+  "extends": "@dk-nodesoft/typescript-config/ts-base",
+  "compilerOptions": {
+    "lib": ["es2020"],
+    "module": "commonjs",
+    "target": "es2020",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+
+    "baseUrl": "./",
+    "incremental": true,
+
+    "noImplicitAny": true,
+
+    "outDir": "./dist"
+  },
+  "include": ["src/**/*"]
+}

@@ -1,0 +1,5 @@
+{
+  "editor.formatOnSave": true,
+  "thunder-client.saveToWorkspace": true,
+  "thunder-client.workspaceRelativePath": "./.vscode"
+}

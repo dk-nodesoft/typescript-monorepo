@@ -1,0 +1,20 @@
+{
+  "extends": "./ts-base-node18.json",
+  "display": "NestJS",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+
+    "types": ["node", "jest"],
+
+    "suppressImplicitAnyIndexErrors": true,
+    "noImplicitAny": true,
+
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "incremental": true
+  }
+}

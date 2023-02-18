@@ -1,0 +1,50 @@
+{
+  "name": "@dk-nodesoft/jest-config",
+  "private": true,
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "types": "src/index.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js"
+    },
+    "./jest-common": {
+      "require": "./src/configs/jest-common.js"
+    },
+    "./jest-nest": {
+      "require": "./src/configs/jest-nest.js"
+    },
+    "./jest-ts": {
+      "require": "./src/configs/jest-ts.js"
+    },
+    "./jest-next": {
+      "require": "./src/configs/jest-next.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "xtest": "jest --colors --forceExit --onlyChanged",
+    "xtest:ci": "jest --collect-coverage=true --forceExit",
+    "xtest:heap": "jest --colors --collect-coverage=true --forceExit --detectOpenHandles --runInBand --logHeapUsage",
+    "lint": "eslint ./src --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts",
+    "lint:fix": "eslint ./src --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --fix",
+    "prettier": "prettier --check ./src",
+    "prettier:fix": "prettier --write ./src",
+    "clean": "rimraf ./dist ./.turbo ./.reports ./.eslintcache"
+  },
+  "devDependencies": {
+    "@dk-nodesoft/eslint-config": "*",
+    "@dk-nodesoft/typescript-config": "*",
+    "@nestjs/common": "9.3.8",
+    "@nestjs/core": "9.3.8",
+    "@nestjs/mongoose": "9.2.1",
+    "get-tsconfig": "4.4.0",
+    "jest-environment-jsdom": "29.4.3",
+    "jest-junit": "15.0.0",
+    "mongoose": "6.9.2",
+    "reflect-metadata": "0.1.13",
+    "rxjs": "7.8.0",
+    "ts-jest": "29.0.5"
+  }
+}

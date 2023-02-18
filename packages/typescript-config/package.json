@@ -1,0 +1,24 @@
+{
+  "name": "@dk-nodesoft/typescript-config",
+  "private": true,
+  "version": "1.5.0",
+  "license": "MIT",
+  "exports": {
+    "./ts-base": {
+      "require": "./ts-base.json"
+    },
+    "./ts-base-node18": {
+      "require": "./ts-base-node18.json"
+    },
+    "./ts-nestjs": {
+      "require": "./ts-nestjs.json"
+    },
+    "./ts-nextjs": {
+      "require": "./ts-nextjs.json"
+    }
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "1.0.3",
+    "@tsconfig/node18": "1.0.1"
+  }
+}
