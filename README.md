@@ -1,1 +1,1 @@
-# typescript-monorepo
+# @dk-nodesoft/typescript-monorepo
