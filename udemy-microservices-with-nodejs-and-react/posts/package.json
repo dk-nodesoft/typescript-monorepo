@@ -2,7 +2,9 @@
   "name": "mnjsreact-posts",
   "description": "Microservices with Node JS and React - Posts services",
   "version": "1.0.0",
+  "type": "module",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "tsc && node dist/index.js",
     "build": "tsc -p tsconfig.build.json",

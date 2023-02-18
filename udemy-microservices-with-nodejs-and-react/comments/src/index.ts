@@ -4,12 +4,12 @@ import cors from 'cors';
 import type { Request, Response } from 'express';
 import express from 'express';
 
-type Comment = {
+export type Comment = {
   id: string;
   content: string;
 };
 
-type CommentsByPostId = {
+export type CommentsByPostId = {
   [key: string]: Comment[];
 };
 const app = express();

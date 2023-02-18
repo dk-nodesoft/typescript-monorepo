@@ -2,7 +2,9 @@
   "name": "mnjsreact-comments",
   "description": "Microservices with Node JS and React - comments services",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
     "start": "tsc && node dist/index.js",
     "build": "tsc -p tsconfig.build.json",
