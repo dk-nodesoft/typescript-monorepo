@@ -8,6 +8,7 @@ A fully packed monorepo with a number of features in play:
 - eslint
 - prettier
 - turbo
+- husky
 
 ## Packages available
 
