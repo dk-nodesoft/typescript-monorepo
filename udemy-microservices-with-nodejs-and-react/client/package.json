@@ -1,5 +1,6 @@
 {
-  "name": "client",
+  "name": "mnjsreact-client",
+  "description": "Microservices with Node JS and React - client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

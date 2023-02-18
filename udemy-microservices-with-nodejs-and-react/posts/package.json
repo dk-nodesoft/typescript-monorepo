@@ -1,13 +1,13 @@
 {
-  "name": "posts",
+  "name": "mnjsreact-posts",
+  "description": "Microservices with Node JS and React - Posts services",
   "version": "1.0.0",
-  "description": "",
   "main": "dist/index.js",
   "scripts": {
     "start": "tsc && node dist/index.js",
     "build": "tsc -p tsconfig.build.json",
     "dev": "tsc -w & nodemon -w dist dist/index.js",
-    "clean": "rimraf ./dist ./.turbo ./.reports",
+    "clean": "rimraf ./dist ./.turbo ./.reports ./.eslintcache",
     "test": "jest --colors --forceExit --onlyChanged",
     "test:ci": "jest --collect-coverage=true --forceExit",
     "test:heap": "jest --colors --collect-coverage=true --forceExit --detectOpenHandles --runInBand --logHeapUsage"
