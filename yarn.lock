@@ -6314,9 +6314,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"client@workspace:servers/client":
+"client@workspace:udemy-microservices-with-nodejs-and-react/client":
   version: 0.0.0-use.local
-  resolution: "client@workspace:servers/client"
+  resolution: "client@workspace:udemy-microservices-with-nodejs-and-react/client"
   dependencies:
     "@dk-nodesoft/eslint-config": "*"
     "@dk-nodesoft/jest-config": "*"
@@ -6483,9 +6483,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"comments@workspace:servers/comments":
+"comments@workspace:udemy-microservices-with-nodejs-and-react/comments":
   version: 0.0.0-use.local
-  resolution: "comments@workspace:servers/comments"
+  resolution: "comments@workspace:udemy-microservices-with-nodejs-and-react/comments"
   dependencies:
     "@dk-nodesoft/eslint-config": "*"
     "@dk-nodesoft/jest-config": "*"
@@ -13909,9 +13909,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"posts@workspace:servers/posts":
+"posts@workspace:udemy-microservices-with-nodejs-and-react/posts":
   version: 0.0.0-use.local
-  resolution: "posts@workspace:servers/posts"
+  resolution: "posts@workspace:udemy-microservices-with-nodejs-and-react/posts"
   dependencies:
     "@dk-nodesoft/eslint-config": "*"
     "@dk-nodesoft/jest-config": "*"
