@@ -36,8 +36,8 @@
   "devDependencies": {
     "@dk-nodesoft/eslint-config": "*",
     "@dk-nodesoft/typescript-config": "*",
-    "@nestjs/common": "9.3.8",
-    "@nestjs/core": "9.3.8",
+    "@nestjs/common": "9.3.9",
+    "@nestjs/core": "9.3.9",
     "@nestjs/mongoose": "9.2.1",
     "get-tsconfig": "4.4.0",
     "jest-environment-jsdom": "29.4.3",
