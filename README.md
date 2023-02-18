@@ -10,6 +10,10 @@ A fully packed monorepo with a number of features in play:
 - turbo
 - husky
 
+## Makefile
+
+The makefile includes easy shortscut for the developer - e.g. for spinning up a local mongo or redis instance
+
 ## Packages available
 
 ### @dk-nodesoft/eslint-config
