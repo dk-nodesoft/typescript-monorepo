@@ -1,4 +1,5 @@
 import { createId } from '@paralleldrive/cuid2';
+import axios from 'axios';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import type { Request, Response } from 'express';
@@ -19,11 +20,11 @@ app.use(cors());
 
 const posts: Posts = {};
 
-app.get('/posts', (_req: Request, res: Response) => {
+app.get('/posts', (_req: Request, res: Response): void => {
   res.send(posts);
 });
 
-app.post('/posts', (req: Request, res: Response) => {
+app.post('/posts', async (req: Request, res: Response): Promise<void> => {
   const id = createId();
 
   const { title } = req.body;
@@ -31,6 +32,14 @@ app.post('/posts', (req: Request, res: Response) => {
     id,
     title
   };
+
+  await axios.post('http://localhost:4005/events', {
+    type: 'PostCreated',
+    data: {
+      id,
+      title
+    }
+  });
 
   res.status(201).send(posts[id]);
 });

@@ -1,5 +1,6 @@
 {
   "editor.formatOnSave": true,
   "thunder-client.saveToWorkspace": true,
-  "thunder-client.workspaceRelativePath": "./.vscode"
+  "thunder-client.workspaceRelativePath": "./.vscode",
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

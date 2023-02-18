@@ -1,0 +1,9 @@
+{
+  "extends": "@dk-nodesoft/typescript-config/ts-base-node18",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist"
+  },
+
+  "include": ["src/**/*", "types/*.d.ts"]
+}
