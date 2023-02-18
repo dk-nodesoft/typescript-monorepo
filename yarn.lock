@@ -4501,14 +4501,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
-  version: 18.13.0
-  resolution: "@types/node@npm:18.13.0"
-  checksum: 4ea10f8802848b01672bce938f678b6774ca2cee0c9774f12275ab064ae07818419c3e2e41d6257ce7ba846d1ea26c63214aa1dfa4166fa3746291752b8c6416
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:18.14.0, @types/node@npm:^18.14.0":
+"@types/node@npm:*, @types/node@npm:18.14.0, @types/node@npm:^18.14.0":
   version: 18.14.0
   resolution: "@types/node@npm:18.14.0"
   checksum: d83fcf5e4ed544755dd9028f5cbb6b9d46235043159111bb2ad62223729aee581c0144a9f6df8ba73d74011db9ed4ebd7af2fd5e0996714e3beb508a5da8ac5c
@@ -7582,9 +7575,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.284":
-  version: 1.4.301
-  resolution: "electron-to-chromium@npm:1.4.301"
-  checksum: a6e1de3c519150d077da6132c438400f438bb44dc2fd7a9e2ad7f7b5cff3146227c4e970fc0ce74fd5e96d3f390e8191b20cd57fa59555fefd378a4f8d46d8bf
+  version: 1.4.302
+  resolution: "electron-to-chromium@npm:1.4.302"
+  checksum: aa764494f9a5b6916ba9f311c0204b2c73449addba18cc55d43e84e8c4465732af9cd6560a8efeb32f3c5a928299030e41352e5b3a081e9e56b086d5be618f45
   languageName: node
   linkType: hard
 
@@ -11853,9 +11846,9 @@ __metadata:
   linkType: hard
 
 "lru-cache@npm:^7.7.1":
-  version: 7.16.0
-  resolution: "lru-cache@npm:7.16.0"
-  checksum: 1a5511a0e695154c37f443c495ebcf3170ec8c291df62e140329cf0c48e2549db836e69371853a28286dc9de73a98f486a7566c64246249a6041c43d4a28bc60
+  version: 7.16.1
+  resolution: "lru-cache@npm:7.16.1"
+  checksum: 64618e3ed4fd1203afedd9bbf5247921b1419f8e3100f20e58e5f04e741f8287bd7d04fefaad332411bb53b3a73445714b235de750cf5d310cba1fa23bd82795
   languageName: node
   linkType: hard
 
@@ -16072,8 +16065,8 @@ __metadata:
   linkType: hard
 
 "terser@npm:^5.0.0, terser@npm:^5.10.0, terser@npm:^5.14.1":
-  version: 5.16.3
-  resolution: "terser@npm:5.16.3"
+  version: 5.16.4
+  resolution: "terser@npm:5.16.4"
   dependencies:
     "@jridgewell/source-map": ^0.3.2
     acorn: ^8.5.0
@@ -16081,7 +16074,7 @@ __metadata:
     source-map-support: ~0.5.20
   bin:
     terser: bin/terser
-  checksum: d3c2ac1c2723c37b698b25b68d76fd315a1277fddde113983d5783d1f2a01dd7b8ed83ba3f54e5e65f0b59dd971ed7be2fdf8d4be94ec694b2d27832d2e7561f
+  checksum: 92c7b38b7322340993d6a3578d74818c3556f362b3014f18a9b3d079ac7fa5da57954fda9a0d40d53013bc3ba82f50758296881abc40761e1bafdbde9a2ab967
   languageName: node
   linkType: hard
 

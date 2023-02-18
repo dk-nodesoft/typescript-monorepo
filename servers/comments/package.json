@@ -6,7 +6,11 @@
   "scripts": {
     "start": "tsc && node dist/index.js",
     "build": "tsc -p tsconfig.build.json",
-    "dev": "tsc -w & nodemon -w dist dist/index.js"
+    "dev": "tsc -w & nodemon -w dist dist/index.js",
+    "clean": "rimraf ./dist ./.turbo ./.reports",
+    "test": "jest --colors --forceExit --onlyChanged",
+    "test:ci": "jest --collect-coverage=true --forceExit",
+    "test:heap": "jest --colors --collect-coverage=true --forceExit --detectOpenHandles --runInBand --logHeapUsage"
   },
   "keywords": [],
   "author": "",

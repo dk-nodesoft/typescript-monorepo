@@ -4,7 +4,20 @@
   "description": "Monorepo with a collection of packages and servers",
   "private": true,
   "scripts": {
-    "build": "turbo build"
+    "build": "turbo build",
+    "lint-staged-files": "lint-staged --allow-empty",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint --concurrency=1 --filter=!todo-backend-server",
+    "lint:fix": "turbo run lint:fix",
+    "prettier": "turbo run prettier --filter=!todo-backend-server",
+    "prettier:fix": "turbo run prettier:fix",
+    "test": "turbo run test",
+    "test:ci": "turbo run test:ci --concurrency=1",
+    "pre-commit": "yarn lint-staged-files",
+    "pre-push": "yarn run build && yarn run test",
+    "dependencies:upgrade": "yarn upgrade-interactive",
+    "clean:repo": "turbo run clean && rimraf yarn.lock .yarn/cache junit.xml package-lock.json **/node_modules .cache && yarn && yarn build",
+    "clean": "turbo run clean && rimraf junit.xml package-lock.json **/node_modules .cache && yarn && yarn build"
   },
   "keywords": [
     "turbo",

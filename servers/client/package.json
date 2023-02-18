@@ -26,7 +26,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "clean": "rimraf ./dist ./.next ./.turbo ./.reports ./.eslintcache",
+    "xtest": "jest --colors --forceExit --onlyChanged",
+    "xtest:ci": "jest --collect-coverage=true --forceExit",
+    "xtest:heap": "jest --colors --collect-coverage=true --forceExit --detectOpenHandles --runInBand --logHeapUsage"
   },
   "browserslist": {
     "production": [
