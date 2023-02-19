@@ -8,6 +8,7 @@ import express from 'express';
 export type Comment = {
   id: string;
   content: string;
+  status: 'approved' | 'pending' | 'rejected';
 };
 
 export type CommentsByPostId = {
@@ -29,7 +30,7 @@ app.post('/posts/:id/comments', async (req: Request, res: Response) => {
   const postId = req.params.id;
 
   const comments = commentsByPostId[postId] || [];
-  comments.push({ id: commentId, content });
+  comments.push({ id: commentId, content, status: 'pending' });
   commentsByPostId[postId] = comments;
 
   await axios.post('http://localhost:4005/events', {
@@ -42,6 +43,11 @@ app.post('/posts/:id/comments', async (req: Request, res: Response) => {
   });
 
   res.status(201).send(comments);
+});
+
+app.post('/events', (req: Request, res: Response) => {
+  console.log('Received Event', req.body.type);
+  res.send({});
 });
 
 app.listen(4001, () => {

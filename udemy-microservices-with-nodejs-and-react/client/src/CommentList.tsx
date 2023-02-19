@@ -1,26 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable @typescript-eslint/no-floating-promises */
-import axios from 'axios';
 import type { Comment } from 'mnjsreact-comments';
-import { useEffect, useState } from 'react';
 
 type Props = {
-  postId: string;
+  comments: Comment[];
 };
 
-const CommentList = ({ postId }: Props): JSX.Element => {
-  const [comments, setComments] = useState<Comment[]>([]);
-
-  const fetchComments = async (): Promise<void> => {
-    const res = await axios.get(`http://localhost:4001/posts/${postId}/comments`);
-
-    setComments(res.data);
-  };
-
-  useEffect((): void => {
-    fetchComments();
-  }, []);
-
+const CommentList = ({ comments }: Props): JSX.Element => {
   const renderedComments = comments.map((comment) => {
     return <li key={comment.id}>{comment.content}</li>;
   });
