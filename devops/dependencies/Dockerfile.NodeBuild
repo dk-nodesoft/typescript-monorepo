@@ -22,8 +22,10 @@ ENV TZ=Europe/Copenhagen
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN locale-gen da_DK.UTF-8
+ENV LANGUAGE da_DK.UTF-8
 ENV LANG da_DK.UTF-8
 ENV LC_CTYPE da_DK.UTF-8
+ENV LC_ALL da_DK.UTF-8
 
 # Install Docker
 # RUN apt-get install -qq ca-certificates curl gnupg lsb-release

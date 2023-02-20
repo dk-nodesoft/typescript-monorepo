@@ -52,6 +52,7 @@ RUN yarn turbo run build --filter=${APPLICATION}
 FROM ${LOCAL_REPO}nodeprod:${NODE_VERSION}
 
 ARG APP_LOCATION
+RUN echo "APP_LOCATION: ${APP_LOCATION}"
 
 # Set workding directory
 WORKDIR /app
@@ -72,7 +73,7 @@ WORKDIR /app/${APP_LOCATION}
 # Setup user
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nodejs
-USER nestjs
+USER nodejs
 
 EXPOSE 5000
 

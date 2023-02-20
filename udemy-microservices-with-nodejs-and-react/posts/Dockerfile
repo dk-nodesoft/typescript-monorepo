@@ -72,7 +72,7 @@ WORKDIR /app/${APP_LOCATION}
 # Setup user
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nodejs
-USER nestjs
+USER nodejs
 
 EXPOSE 5000
 

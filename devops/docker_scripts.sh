@@ -3,12 +3,12 @@
 
 # Get passed arguments
 ACTION=$1
-APP_LOCATION=./$2
+APP_LOCATION=$2
 # --
 
 # Resolve package.json to get the application name
 if [ -z "$APPLICATION" ]; then
-  pushd ${APP_LOCATION}
+  pushd ./${APP_LOCATION}
   APPLICATION=`cat package.json | grep name | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d '[[:space:]]'`
   popd  
   export APPLICATION=$APPLICATION
@@ -61,13 +61,14 @@ fi
 # Load configuration
 DOCKER_CONTAINER_NAME=$APPLICATION
 DOCKER_IMAGE_NAME=$APPLICATION
+VERBOSE=1
 # --
 
 # Report setting if verbose
 if [ $VERBOSE -eq 1 ]
 then
     echo "ACTION.......: $ACTION"
-    echo "APP_LOCATION.: $APP_LOCATION"
+    echo "APP_LOCATION.: ./$APP_LOCATION"
     echo "APPLICATION..: $APPLICATION"
     echo "NODE_ENV.....: $NODE_ENV"
     echo "SCRIPT_DIR...: $SCRIPT_DIR"
@@ -110,7 +111,7 @@ case $ACTION in
           --build-arg LOCAL_REPO=${LOCAL_REPO} \
           --build-arg APPLICATION=${APPLICATION} \
           -t ${TAG_BUILD} \
-          -f ${APP_LOCATION}/Dockerfile .
+          -f ./${APP_LOCATION}/Dockerfile .
 
         exitCode=$?;;
 
@@ -131,7 +132,7 @@ case $ACTION in
           --build-arg LOCAL_REPO=${LOCAL_REPO} \
           --build-arg APPLICATION=${APPLICATION} \
           -t ${TAG_BUILD} \
-          -f servers/${APP_LOCATION}/Dockerfile .
+          -f ./${APP_LOCATION}/Dockerfile .
 
         exitCode=$?;;
 
@@ -148,7 +149,7 @@ case $ACTION in
           --build-arg APPLICATION=${APPLICATION} \
           -t ${TAG_DEPLOY_LATEST} \
           -t ${TAG_DEPLOY} \
-          -f ${APP_LOCATION}/Dockerfile .
+          -f ./${APP_LOCATION}/Dockerfile .
 
         exitCode=$?;;
 
