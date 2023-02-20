@@ -3,21 +3,27 @@
 
 # Get passed arguments
 ACTION=$1
-APPLICATION=$2
+APP_LOCATION=./$2
+# --
+
+# Resolve package.json to get the application name
+if [ -z "$APPLICATION" ]; then
+  pushd ${APP_LOCATION}
+  APPLICATION=`cat package.json | grep name | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d '[[:space:]]'`
+  popd  
+  export APPLICATION=$APPLICATION
+  export APP_LOCATION=$APP_LOCATION
+fi
 # --
 
 # Get environment variables
 NODE_ENV=${NODE_ENV:=development}
-LOCAL_REPO=${LOCAL_REPO:=dockerrepo.softdesign.dk:5000/}
-NODE_VERSION=${NODE_VERSION:=16.13.0}
+LOCAL_REPO=${LOCAL_REPO}
+NODE_VERSION=${NODE_VERSION:=18.14.1}
 # --
 
 # Get the git branchname for docker container name
 BRANCH_NAME=${BRANCH_NAME:=$(git rev-parse --abbrev-ref HEAD | sed 's/[^a-zA-Z0-9]/-/g')} 
-# --
-
-# Identify the hostname
-HOST_NAME=`hostname`
 # --
 
 # Identify the home directory of this script file - SCRIPT_DIR 
@@ -32,10 +38,6 @@ SCRIPT_DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 # Setup home directory - root
 HOME_DIR=$SCRIPT_DIR/..
-# --
-
-# Setup location for devops config files - application specific
-CONFIG_DIR=$HOME_DIR/servers/$APPLICATION/devops
 # --
 
 # Check if Jenkins IMG_VERSION is available if so use it - if not set IMG_VERSION defaults to 0 (zero)
@@ -57,20 +59,19 @@ fi
 # --
 
 # Load configuration
-. $CONFIG_DIR/default.config
-. $CONFIG_DIR/$NODE_ENV.config
+DOCKER_CONTAINER_NAME=$APPLICATION
+DOCKER_IMAGE_NAME=$APPLICATION
 # --
 
 # Report setting if verbose
 if [ $VERBOSE -eq 1 ]
 then
     echo "ACTION.......: $ACTION"
+    echo "APP_LOCATION.: $APP_LOCATION"
     echo "APPLICATION..: $APPLICATION"
-    echo "HOST_NAME....: $HOST_NAME"
     echo "NODE_ENV.....: $NODE_ENV"
     echo "SCRIPT_DIR...: $SCRIPT_DIR"
     echo "HOME_DIR.....: $HOME_DIR"
-    echo "CONFIG_DIR...: $CONFIG_DIR"
     echo "VERSION......: $VERSION"
     echo "JENKINS......: $JENKINS"
     echo "BRANCH_NAME..: $BRANCH_NAME"
@@ -109,7 +110,7 @@ case $ACTION in
           --build-arg LOCAL_REPO=${LOCAL_REPO} \
           --build-arg APPLICATION=${APPLICATION} \
           -t ${TAG_BUILD} \
-          -f servers/${APPLICATION}/Dockerfile .
+          -f ${APP_LOCATION}/Dockerfile .
 
         exitCode=$?;;
 
@@ -130,7 +131,7 @@ case $ACTION in
           --build-arg LOCAL_REPO=${LOCAL_REPO} \
           --build-arg APPLICATION=${APPLICATION} \
           -t ${TAG_BUILD} \
-          -f servers/${APPLICATION}/Dockerfile .
+          -f servers/${APP_LOCATION}/Dockerfile .
 
         exitCode=$?;;
 
@@ -147,7 +148,7 @@ case $ACTION in
           --build-arg APPLICATION=${APPLICATION} \
           -t ${TAG_DEPLOY_LATEST} \
           -t ${TAG_DEPLOY} \
-          -f servers/${APPLICATION}/Dockerfile .
+          -f ${APP_LOCATION}/Dockerfile .
 
         exitCode=$?;;
 
@@ -163,14 +164,10 @@ case $ACTION in
       docker run \
         --name ${DOCKER_CONTAINER_NAME} \
         -d \
-        --cpus 2 \
         --restart unless-stopped \
-        --network=odin \
+        --network=nodejs \
         --dns-option=ndots:1 \
         --env NODE_ENV=$NODE_ENV \
-        --log-driver none \
-		    -v ${LOG_LOCATION}:/app/logs \
-		    -v ${TMP_LOCATION}:/app/temp \
         ${DOCKER_PORTS} \
         ${TAG_DEPLOY}
         

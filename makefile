@@ -13,8 +13,16 @@ mkfile_dir := $(dir $(mkfile_path))
 home_dir := ${HOME}
 node_env := $(NODE_ENV)
 
-docker-build:
-	-@docker build -f ./udemy-microservices-with-node-js-and-react/posts/Dockerfile .
+network:
+	-@docker network create nodejs 2>/dev/null
+
+docker-build-posts: network
+	@./devops/docker_scripts.sh build-prod udemy-microservices-with-nodejs-and-react/posts
+
+docker-build-comments: network
+	@./devops/docker_scripts.sh build-prod udemy-microservices-with-nodejs-and-react/comments
+
+docker-build: docker-build-posts docker-build-comments
 
 # Dependencies and local registry
 build-dependencies:
