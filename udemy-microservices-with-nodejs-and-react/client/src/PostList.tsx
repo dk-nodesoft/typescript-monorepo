@@ -2,13 +2,13 @@
 /* eslint-disable promise/catch-or-return */
 /* eslint-disable @typescript-eslint/no-floating-promises */
 import axios from 'axios';
-import type { Posts } from 'mnjsreact-query';
+import type { QueryPosts } from 'mnjsreact-types';
 import { useEffect, useState } from 'react';
 import CommentCreate from './CommentCreate';
 import CommentList from './CommentList';
 
 const PostList = (): JSX.Element => {
-  const [posts, setPosts] = useState<Posts>({});
+  const [posts, setPosts] = useState<QueryPosts>({});
 
   // useEffect fetching data with cleanup preventing race condition.
   // you will se that the setPosts are only called once but the fetchPosts are called twice in development (strict mode)
@@ -26,7 +26,7 @@ const PostList = (): JSX.Element => {
     };
   }, []);
 
-  const fetchPosts = async (): Promise<Posts> => {
+  const fetchPosts = async (): Promise<QueryPosts> => {
     const res = await axios.get('http://localhost:4002/posts');
 
     return res.data;

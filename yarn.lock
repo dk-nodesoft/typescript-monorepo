@@ -12228,8 +12228,7 @@ __metadata:
     "@types/react": ^18.0.28
     "@types/react-dom": ^18.0.11
     axios: 1.3.3
-    mnjsreact-comments: "*"
-    mnjsreact-posts: "*"
+    mnjsreact-types: "*"
     react: ^18.2.0
     react-dom: ^18.2.0
     react-scripts: 5.0.1
@@ -12238,7 +12237,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"mnjsreact-comments@*, mnjsreact-comments@workspace:udemy-microservices-with-nodejs-and-react/comments":
+"mnjsreact-comments@workspace:udemy-microservices-with-nodejs-and-react/comments":
   version: 0.0.0-use.local
   resolution: "mnjsreact-comments@workspace:udemy-microservices-with-nodejs-and-react/comments"
   dependencies:
@@ -12253,6 +12252,7 @@ __metadata:
     body-parser: 1.20.1
     cors: 2.8.5
     express: 4.18.2
+    mnjsreact-types: "*"
     nodemon: 2.0.20
   languageName: unknown
   linkType: soft
@@ -12276,7 +12276,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"mnjsreact-posts@*, mnjsreact-posts@workspace:udemy-microservices-with-nodejs-and-react/posts":
+"mnjsreact-moderator@workspace:udemy-microservices-with-nodejs-and-react/moderator":
+  version: 0.0.0-use.local
+  resolution: "mnjsreact-moderator@workspace:udemy-microservices-with-nodejs-and-react/moderator"
+  dependencies:
+    "@dk-nodesoft/eslint-config": "*"
+    "@dk-nodesoft/jest-config": "*"
+    "@dk-nodesoft/typescript-config": "*"
+    "@paralleldrive/cuid2": 2.1.0
+    "@types/body-parser": 1.19.2
+    "@types/cors": 2.8.13
+    "@types/express": 4.17.17
+    axios: 1.3.3
+    body-parser: 1.20.1
+    cors: 2.8.5
+    express: 4.18.2
+    mnjsreact-types: "*"
+    nodemon: 2.0.20
+  languageName: unknown
+  linkType: soft
+
+"mnjsreact-posts@workspace:udemy-microservices-with-nodejs-and-react/posts":
   version: 0.0.0-use.local
   resolution: "mnjsreact-posts@workspace:udemy-microservices-with-nodejs-and-react/posts"
   dependencies:
@@ -12291,6 +12311,7 @@ __metadata:
     body-parser: 1.20.1
     cors: 2.8.5
     express: 4.18.2
+    mnjsreact-types: "*"
     nodemon: 2.0.20
   languageName: unknown
   linkType: soft
@@ -12310,8 +12331,26 @@ __metadata:
     body-parser: 1.20.1
     cors: 2.8.5
     express: 4.18.2
-    mnjsreact-comments: "*"
-    mnjsreact-posts: "*"
+    mnjsreact-types: "*"
+    nodemon: 2.0.20
+  languageName: unknown
+  linkType: soft
+
+"mnjsreact-types@*, mnjsreact-types@workspace:udemy-microservices-with-nodejs-and-react/types":
+  version: 0.0.0-use.local
+  resolution: "mnjsreact-types@workspace:udemy-microservices-with-nodejs-and-react/types"
+  dependencies:
+    "@dk-nodesoft/eslint-config": "*"
+    "@dk-nodesoft/jest-config": "*"
+    "@dk-nodesoft/typescript-config": "*"
+    "@paralleldrive/cuid2": 2.1.0
+    "@types/body-parser": 1.19.2
+    "@types/cors": 2.8.13
+    "@types/express": 4.17.17
+    axios: 1.3.3
+    body-parser: 1.20.1
+    cors: 2.8.5
+    express: 4.18.2
     nodemon: 2.0.20
   languageName: unknown
   linkType: soft

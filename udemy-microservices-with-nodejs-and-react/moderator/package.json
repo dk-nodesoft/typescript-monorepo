@@ -1,6 +1,6 @@
 {
-  "name": "mnjsreact-query",
-  "description": "Microservices with Node JS and React - Query services",
+  "name": "mnjsreact-moderator",
+  "description": "Microservices with Node JS and React - Posts moderation services",
   "version": "1.0.0",
   "type": "module",
   "main": "dist/index.js",

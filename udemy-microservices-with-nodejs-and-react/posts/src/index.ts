@@ -4,15 +4,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import type { Request, Response } from 'express';
 import express from 'express';
-
-export type Post = {
-  id: string;
-  title: string;
-};
-
-export type Posts = {
-  [key: string]: Post;
-};
+import type { Posts } from 'mnjsreact-types';
 
 const app = express();
 app.use(bodyParser.json());
