@@ -1,14 +1,17 @@
 import axios from 'axios';
 import bodyParser from 'body-parser';
 import express from 'express';
+import type { Event } from 'mnjsreact-types';
 
 const app = express();
 app.use(bodyParser.json());
 
-app.post('/events', (req, res) => {
-  const event = req.body;
+const events: Event[] = [];
 
-  console.log('Received Event', event.type);
+app.post('/events', (req, res) => {
+  const event: Event = req.body;
+
+  events.push(event);
 
   axios.post('http://localhost:4000/events', event).catch((err) => {
     console.log(err.message);
@@ -24,6 +27,10 @@ app.post('/events', (req, res) => {
   });
 
   res.send({ status: 'ok' });
+});
+
+app.get('/events', (req, res) => {
+  res.send(events);
 });
 
 app.listen(4005, () => {

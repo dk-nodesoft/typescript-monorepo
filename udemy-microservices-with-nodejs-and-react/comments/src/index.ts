@@ -4,8 +4,8 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import type { Request, Response } from 'express';
 import express from 'express';
-import type { Comment, CommentsByPostId } from 'mnjsreact-types';
-import { CommentStatus } from 'mnjsreact-types';
+import type { Comment, CommentsByPostId, Event, EventCommentCreated } from 'mnjsreact-types';
+import { CommentStatus, EventType } from 'mnjsreact-types';
 
 const app = express();
 app.use(bodyParser.json());
@@ -23,17 +23,19 @@ app.post('/posts/:id/comments', async (req: Request, res: Response) => {
   const postId = req.params.id;
 
   const comments = commentsByPostId[postId] || [];
-  comments.push({ id: commentId, content, status: CommentStatus.Pending });
+  const status = CommentStatus.Pending;
+  comments.push({ id: commentId, content, status });
   commentsByPostId[postId] = comments;
 
   await axios.post('http://localhost:4005/events', {
-    type: 'CommentCreated',
+    type: EventType.CommentCreated,
     data: {
       id: commentId,
       content,
-      postId
+      postId,
+      status
     }
-  });
+  } as Event<EventCommentCreated>);
 
   res.status(201).send(comments);
 });
@@ -43,7 +45,7 @@ app.post('/events', async (req: Request, res: Response) => {
 
   const { type, data } = req.body;
 
-  if (type === 'CommentModerated') {
+  if (type === EventType.CommentModerated) {
     const { postId, id, status, content } = data;
     const comments = commentsByPostId[postId];
 
@@ -55,7 +57,7 @@ app.post('/events', async (req: Request, res: Response) => {
       comment.status = status || CommentStatus.Pending;
 
       await axios.post('http://localhost:4005/events', {
-        type: 'CommentUpdated',
+        type: EventType.CommentUpdated,
         data: {
           id,
           status,

@@ -1,10 +1,13 @@
+export type PostId = string;
+export type CommentId = string;
+
 export type Post = {
-  id: string;
+  id: PostId;
   title: string;
 };
 
 export type Posts = {
-  [key: string]: Post;
+  [key: PostId]: Post;
 };
 
 export enum CommentStatus {
@@ -14,15 +17,39 @@ export enum CommentStatus {
 }
 
 export type Comment = {
-  id: string;
+  id: CommentId;
   content: string;
   status: CommentStatus;
 };
 
 export type CommentsByPostId = {
-  [key: string]: Comment[];
+  [key: CommentId]: Comment[];
 };
 
 export type QueryPosts = {
-  [key: string]: Post & { comments: Comment[] };
+  [key: PostId]: Post & { comments: Comment[] };
+};
+
+export enum EventType {
+  PostCreated = 'PostCreated',
+  CommentCreated = 'CommentCreated',
+  CommentUpdated = 'CommentUpdated',
+  CommentModerated = 'CommentModerated'
+}
+
+export type Event<D = any> = {
+  type: EventType;
+  data: D;
+};
+
+export type EventPostCreated = {
+  id: PostId;
+  title: string;
+};
+
+export type EventCommentCreated = {
+  id: CommentId;
+  content: string;
+  postId: PostId;
+  status: CommentStatus;
 };
