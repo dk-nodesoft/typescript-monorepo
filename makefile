@@ -2,10 +2,29 @@
 # $ sudo groupadd docker
 # $ sudo usermod -aG docker $USER
 
+# Uncomment and set value of LOCAL_REPO to your local docker registry
+# export LOCAL_REPO=dockerrepo.softdesign.dk:5000/
+
+# Define node version to use
+export NODE_VERSION=18.14.1
+
 mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
 mkfile_dir := $(dir $(mkfile_path))
 home_dir := ${HOME}
 node_env := $(NODE_ENV)
+
+docker-build:
+	-@docker build -f ./udemy-microservices-with-node-js-and-react/posts/Dockerfile .
+
+# Dependencies and local registry
+build-dependencies:
+	docker build --build-arg NODE_VERSION=${NODE_VERSION} -t ${LOCAL_REPO}nodebuild:${NODE_VERSION} -t ${LOCAL_REPO}nodebuild:latest -f devops/dependencies/Dockerfile.NodeBuild .
+	docker build --build-arg NODE_VERSION=${NODE_VERSION} -t ${LOCAL_REPO}nodeprod:${NODE_VERSION} -f devops/dependencies/Dockerfile.NodeProd .
+#	docker build --build-arg NODE_VERSION=${NODE_VERSION} -t ${LOCAL_REPO}jenkinsagent:${NODE_VERSION} -t ${LOCAL_REPO}jenkinsagent:latest -f devops/dependencies/Dockerfile.JenkinsAgent .
+#	docker image push --all-tags ${LOCAL_REPO}nodebuild
+#	docker image push --all-tags ${LOCAL_REPO}nodeprod
+#	docker image push --all-tags ${LOCAL_REPO}jenkinsagent
+
 
 # REDIS
 redis:

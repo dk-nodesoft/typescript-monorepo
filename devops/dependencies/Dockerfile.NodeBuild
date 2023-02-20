@@ -1,0 +1,49 @@
+# ----------------------------------------------
+# BUILD
+# ----------------------------------------------
+ARG NODE_VERSION=18.13.0
+
+FROM node:${NODE_VERSION}
+
+# Update linux repo and perform upgrade
+RUN apt-get clean && apt-get -qq update && apt-get -qq upgrade -y
+
+# Ensure latest npm and yarn are installed
+RUN npm install -g npm
+RUN npm install --force -g yarn
+
+# Install turbo 
+RUN yarn global add turbo
+
+# Setup correct timezone and locals for docker instance
+RUN apt-get install -y locales
+
+ENV TZ=Europe/Copenhagen
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+RUN locale-gen da_DK.UTF-8
+ENV LANG da_DK.UTF-8
+ENV LC_CTYPE da_DK.UTF-8
+
+# Install Docker
+# RUN apt-get install -qq ca-certificates curl gnupg lsb-release
+# RUN curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+# RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
+# RUN apt-get -qq update && apt-get install docker-ce docker-ce-cli containerd.io -y
+# RUN systemctl enable docker.service
+# RUN systemctl enable containerd.service
+
+# Install java 11.0 jdk
+# RUN apt-get -qq install default-jdk -y
+
+# Disable HUSKY during installation
+ENV HUSKY_SKIP_INSTALL 1
+
+# Install mongodb-memory-server-global for mongod runtime used during test
+WORKDIR /tmp/mongod.install
+RUN npm init -y
+RUN npm install --save-dev mongodb-memory-server-global
+
+# Set workding directory
+WORKDIR /app
+
