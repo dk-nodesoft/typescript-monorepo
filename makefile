@@ -6,7 +6,7 @@
 # export LOCAL_REPO=dockerrepo.softdesign.dk:5000/
 
 # Define node version to use
-export NODE_VERSION=18.14.1
+export NODE_VERSION=18.14.2
 
 mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
 mkfile_dir := $(dir $(mkfile_path))
@@ -22,7 +22,16 @@ docker-build-posts: network
 docker-build-comments: network
 	@./devops/docker_scripts.sh build-prod udemy-microservices-with-nodejs-and-react/comments
 
-docker-build: docker-build-posts docker-build-comments
+docker-build-query: network
+	@./devops/docker_scripts.sh build-prod udemy-microservices-with-nodejs-and-react/query
+
+docker-build-moderator: network
+	@./devops/docker_scripts.sh build-prod udemy-microservices-with-nodejs-and-react/moderator
+
+docker-build-event-bus: network
+	@./devops/docker_scripts.sh build-prod udemy-microservices-with-nodejs-and-react/event-bus
+
+docker-build: docker-build-posts docker-build-comments docker-build-query docker-build-moderator docker-build-event-bus
 
 # Dependencies and local registry
 build-dependencies:

@@ -11,8 +11,6 @@ if [ -z "$APPLICATION" ]; then
   pushd ./${APP_LOCATION}
   APPLICATION=`cat package.json | grep name | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d '[[:space:]]'`
   popd  
-  export APPLICATION=$APPLICATION
-  export APP_LOCATION=$APP_LOCATION
 fi
 # --
 
@@ -110,6 +108,7 @@ case $ACTION in
           --build-arg NODE_VERSION=${NODE_VERSION} \
           --build-arg LOCAL_REPO=${LOCAL_REPO} \
           --build-arg APPLICATION=${APPLICATION} \
+          --build-arg APP_LOCATION=${APP_LOCATION} \
           -t ${TAG_BUILD} \
           -f ./${APP_LOCATION}/Dockerfile .
 
@@ -131,6 +130,7 @@ case $ACTION in
           --build-arg NODE_VERSION=${NODE_VERSION} \
           --build-arg LOCAL_REPO=${LOCAL_REPO} \
           --build-arg APPLICATION=${APPLICATION} \
+          --build-arg APP_LOCATION=${APP_LOCATION} \
           -t ${TAG_BUILD} \
           -f ./${APP_LOCATION}/Dockerfile .
 
@@ -147,6 +147,7 @@ case $ACTION in
           --build-arg NODE_VERSION=${NODE_VERSION} \
           --build-arg LOCAL_REPO=${LOCAL_REPO} \
           --build-arg APPLICATION=${APPLICATION} \
+          --build-arg APP_LOCATION=${APP_LOCATION} \
           -t ${TAG_DEPLOY_LATEST} \
           -t ${TAG_DEPLOY} \
           -f ./${APP_LOCATION}/Dockerfile .

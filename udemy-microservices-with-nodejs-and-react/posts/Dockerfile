@@ -65,10 +65,6 @@ RUN yarn install --production --immutable
 
 WORKDIR /app/${APP_LOCATION}
 
-# Construct script to start solution
-# RUN echo "pm2-runtime start --env \${NODE_ENV:=development} pm2.json" >./pm2script.sh
-# RUN chmod +x ./pm2script.sh
-
 # Setup user
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nodejs
