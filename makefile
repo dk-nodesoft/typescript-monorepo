@@ -33,6 +33,15 @@ docker-build-event-bus: network
 
 docker-build: docker-build-posts docker-build-comments docker-build-query docker-build-moderator docker-build-event-bus
 
+k8s-deploy: docker-build
+	kubectl apply -f ./devops/k8s/posts-depl.yaml
+
+k8s-list: 
+	kubectl get pods
+
+k8s-delete:
+	kubectl delete deployment posts-depl	
+	
 # Dependencies and local registry
 build-dependencies:
 	docker build --build-arg NODE_VERSION=${NODE_VERSION} -t ${LOCAL_REPO}nodebuild:${NODE_VERSION} -t ${LOCAL_REPO}nodebuild:latest -f devops/dependencies/Dockerfile.NodeBuild .
