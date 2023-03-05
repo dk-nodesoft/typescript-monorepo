@@ -26,7 +26,8 @@ WORKDIR /app
 COPY --from=prune /app/.gitignore .gitignore
 COPY --from=prune /app/out/json/ .
 COPY --from=prune /app/out/yarn.lock ./yarn.lock
-# COPY --from=prune /app/.npmrc .npmrc
+COPY --from=prune /app/.yarnrc.yml .yarnrc.yml
+COPY --from=prune /app/.yarn .yarn
 
 RUN yarn install --immutable
 
@@ -59,9 +60,10 @@ WORKDIR /app
 # Copy files for production
 COPY --from=build /app .
 
-# Ensure only production modules are installed
+# Ensure only production modules are installed and clean up
 RUN find . -type d -name node_modules -prune -exec rm -rf {} \;
-RUN yarn install --production --immutable
+RUN yarn workspaces focus --production --all
+RUN rm -rf .yarn/cache .yarn/unplugged .yarn/build-state.yml .yarn/install-state.gz .yarn/plugins .yarn/releases .yarn/versions
 
 WORKDIR /app/${APP_LOCATION}
 

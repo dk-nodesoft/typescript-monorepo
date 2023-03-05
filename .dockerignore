@@ -1,2 +1,6 @@
-node_modules
-Dockerfile
+**/node_modules
+**/Dockerfile
+**/dist
+
+.yarn/cache
+.yarn/install-state.gz
