@@ -1,5 +1,5 @@
 ARG LOCAL_REPO=dockerrepo.softdesign.dk:5000/
-ARG NODE_VERSION=18.144.1
+ARG NODE_VERSION=18.14.1
 
 # ----------------------------------------------
 # PRUNE
