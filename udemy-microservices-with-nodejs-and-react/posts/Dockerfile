@@ -28,7 +28,7 @@ COPY --from=prune /app/out/json/ .
 COPY --from=prune /app/out/yarn.lock ./yarn.lock
 COPY --from=prune /app/.yarnrc.yml .yarnrc.yml
 COPY --from=prune /app/.yarn .yarn
-
+yarn
 RUN yarn install --immutable
 
 COPY --from=prune /app/out/full/ .

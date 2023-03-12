@@ -7,25 +7,9 @@ FROM node:${NODE_VERSION}-slim
 
 RUN apt-get clean && apt-get -qq update && apt-get -qq upgrade -y
 
-# Ensure latest npm and yarn are installed
-RUN npm install -g npm
-
-# Setup correct timezone for docker instance and locals
-RUN apt-get install -y locales
-
+# Setup correct timezone for docker instance
 ENV TZ=Europe/Copenhagen
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
-# RUN locale-gen da_DK
-# RUN locale-gen da_DK.UTF-8
-# RUN update-locale
-# ENV LANGUAGE=da_DK.UTF-8
-# ENV LANG=da_DK.UTF-8
-# ENV LC_CTYPE=da_DK.UTF-8
-# ENV LC_ALL=da_DK.UTF-8
-
-# Install required global modules and software
-# RUN npm install pm2 -g
 
 # Set workding directory
 WORKDIR /app
