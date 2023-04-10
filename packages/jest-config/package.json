@@ -36,15 +36,15 @@
   "devDependencies": {
     "@dk-nodesoft/eslint-config": "*",
     "@dk-nodesoft/typescript-config": "*",
-    "@nestjs/common": "9.3.11",
-    "@nestjs/core": "9.3.11",
+    "@nestjs/common": "9.4.0",
+    "@nestjs/core": "9.4.0",
     "@nestjs/mongoose": "9.2.2",
-    "get-tsconfig": "4.4.0",
+    "get-tsconfig": "4.5.0",
     "jest-environment-jsdom": "29.5.0",
     "jest-junit": "15.0.0",
-    "mongoose": "7.0.2",
+    "mongoose": "7.0.3",
     "reflect-metadata": "0.1.13",
     "rxjs": "7.8.0",
-    "ts-jest": "29.0.5"
+    "ts-jest": "29.1.0"
   }
 }
