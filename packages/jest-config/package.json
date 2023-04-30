@@ -41,10 +41,10 @@
     "@nestjs/mongoose": "9.2.2",
     "get-tsconfig": "4.5.0",
     "jest-environment-jsdom": "29.5.0",
-    "jest-junit": "15.0.0",
-    "mongoose": "7.0.3",
+    "jest-junit": "16.0.0",
+    "mongoose": "7.1.0",
     "reflect-metadata": "0.1.13",
-    "rxjs": "7.8.0",
+    "rxjs": "7.8.1",
     "ts-jest": "29.1.0"
   }
 }

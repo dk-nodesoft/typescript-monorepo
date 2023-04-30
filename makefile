@@ -6,7 +6,7 @@
 # export LOCAL_REPO=dockerrepo.softdesign.dk:5000/
 
 # Define node version to use
-export NODE_VERSION=18.15.0
+export NODE_VERSION=18.16.0
 
 mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
 mkfile_dir := $(dir $(mkfile_path))
