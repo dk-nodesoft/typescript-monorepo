@@ -1887,8 +1887,8 @@ __metadata:
   dependencies:
     "@dk-nodesoft/eslint-config": "*"
     "@dk-nodesoft/typescript-config": "*"
-    "@nestjs/common": 9.4.2
-    "@nestjs/core": 9.4.3
+    "@nestjs/common": 10.0.1
+    "@nestjs/core": 10.0.1
     "@nestjs/mongoose": 10.0.0
     get-tsconfig: 4.6.0
     jest-environment-jsdom: 29.5.0
@@ -2915,33 +2915,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/common@npm:9.4.2":
-  version: 9.4.2
-  resolution: "@nestjs/common@npm:9.4.2"
+"@nestjs/common@npm:10.0.1":
+  version: 10.0.1
+  resolution: "@nestjs/common@npm:10.0.1"
   dependencies:
     iterare: 1.2.1
-    tslib: 2.5.2
+    tslib: 2.5.3
     uid: 2.0.2
   peerDependencies:
-    cache-manager: <=5
     class-transformer: "*"
     class-validator: "*"
     reflect-metadata: ^0.1.12
     rxjs: ^7.1.0
   peerDependenciesMeta:
-    cache-manager:
-      optional: true
     class-transformer:
       optional: true
     class-validator:
       optional: true
-  checksum: d4f0b32da2499af46947c84073b863ff20358be0e093975208958dcebd8d459121ec582bae2f2f9f2caa90897df36173d11b6760053e644a8bca76a26f9d45fd
+  checksum: 035109d1f68f7e9f50ee8daf9734b0e328466015ffb80afe3b88bc0b00b494d46e24bc76a7fbe5003c506097d58df04aad5a2ab92cb5ac8eeec5945da7fcab3c
   languageName: node
   linkType: hard
 
-"@nestjs/core@npm:9.4.3":
-  version: 9.4.3
-  resolution: "@nestjs/core@npm:9.4.3"
+"@nestjs/core@npm:10.0.1":
+  version: 10.0.1
+  resolution: "@nestjs/core@npm:10.0.1"
   dependencies:
     "@nuxtjs/opencollective": 0.3.2
     fast-safe-stringify: 2.1.1
@@ -2950,10 +2947,10 @@ __metadata:
     tslib: 2.5.3
     uid: 2.0.2
   peerDependencies:
-    "@nestjs/common": ^9.0.0
-    "@nestjs/microservices": ^9.0.0
-    "@nestjs/platform-express": ^9.0.0
-    "@nestjs/websockets": ^9.0.0
+    "@nestjs/common": ^10.0.0
+    "@nestjs/microservices": ^10.0.0
+    "@nestjs/platform-express": ^10.0.0
+    "@nestjs/websockets": ^10.0.0
     reflect-metadata: ^0.1.12
     rxjs: ^7.1.0
   peerDependenciesMeta:
@@ -2963,7 +2960,7 @@ __metadata:
       optional: true
     "@nestjs/websockets":
       optional: true
-  checksum: 5c556c43fc4bce5001c9fa1190630031e60db5678d47c1266f6aca957d862fc8aa7168414cf7938852976ee52086395bd05d4a4daaa0915d12e47c4f644dc263
+  checksum: c091835040cf4243fbd58c765bafe57c9fd9c347c3f735a05c44ee3e34f041e82ade1e44a9ddb626d42d6172c0feaeff8e9457cd1a176a58b54fea44d1851864
   languageName: node
   linkType: hard
 
@@ -16093,13 +16090,6 @@ __metadata:
     minimist: ^1.2.6
     strip-bom: ^3.0.0
   checksum: a6162eaa1aed680537f93621b82399c7856afd10ec299867b13a0675e981acac4e0ec00896860480efc59fc10fd0b16fdc928c0b885865b52be62cadac692447
-  languageName: node
-  linkType: hard
-
-"tslib@npm:2.5.2":
-  version: 2.5.2
-  resolution: "tslib@npm:2.5.2"
-  checksum: 4d3c1e238b94127ed0e88aa0380db3c2ddae581dc0f4bae5a982345e9f50ee5eda90835b8bfba99b02df10a5734470be197158c36f9129ac49fdc14a6a9da222
   languageName: node
   linkType: hard
 
