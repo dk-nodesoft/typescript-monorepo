@@ -1971,6 +1971,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@dk-nodesoft/nestjs-logger@workspace:packages/nestjs-logger":
+  version: 0.0.0-use.local
+  resolution: "@dk-nodesoft/nestjs-logger@workspace:packages/nestjs-logger"
+  dependencies:
+    "@dk-nodesoft/eslint-config": "*"
+    "@dk-nodesoft/jest-config": "*"
+    "@dk-nodesoft/nestjs-config": "*"
+    "@dk-nodesoft/ts-utils": "*"
+    "@dk-nodesoft/typescript-config": "*"
+    "@nestjs/common": 10.1.0
+    "@nestjs/core": 10.1.0
+    nestjs-pino: 3.3.0
+    reflect-metadata: 0.1.13
+    rxjs: 7.8.1
+  languageName: unknown
+  linkType: soft
+
 "@dk-nodesoft/nestjs-mongoose@*, @dk-nodesoft/nestjs-mongoose@workspace:packages/nestjs-mongoose":
   version: 0.0.0-use.local
   resolution: "@dk-nodesoft/nestjs-mongoose@workspace:packages/nestjs-mongoose"
@@ -2035,6 +2052,7 @@ __metadata:
     "@nestjs/common": 10.1.0
     "@nestjs/core": 10.1.0
     "@nestjs/mongoose": 10.0.1
+    "@types/object-hash": 3.0.2
     async: 3.2.4
     bull: 4.10.4
     class-transformer: 0.5.1
@@ -2043,6 +2061,7 @@ __metadata:
     mongoose: 7.4.0
     mongoose-lean-virtuals: 0.9.1
     nestjs-cls: 3.5.0
+    object-hash: 3.0.0
     reflect-metadata: 0.1.13
     rxjs: 7.8.1
     type-fest: 4.0.0
@@ -4216,6 +4235,13 @@ __metadata:
   version: 2.4.1
   resolution: "@types/normalize-package-data@npm:2.4.1"
   checksum: e87bccbf11f95035c89a132b52b79ce69a1e3652fe55962363063c9c0dae0fe2477ebc585e03a9652adc6f381d24ba5589cc5e51849df4ced3d3e004a7d40ed5
+  languageName: node
+  linkType: hard
+
+"@types/object-hash@npm:3.0.2":
+  version: 3.0.2
+  resolution: "@types/object-hash@npm:3.0.2"
+  checksum: 0332e59074e7df2e74c093a7419c05c1e1c5ae1e12d3779f3240b3031835ff045b4ac591362be0b411ace24d3b5e760386b434761c33af25904f7a3645cb3785
   languageName: node
   linkType: hard
 
@@ -8487,13 +8513,13 @@ __metadata:
   linkType: hard
 
 "espree@npm:^9.6.0":
-  version: 9.6.0
-  resolution: "espree@npm:9.6.0"
+  version: 9.6.1
+  resolution: "espree@npm:9.6.1"
   dependencies:
     acorn: ^8.9.0
     acorn-jsx: ^5.3.2
     eslint-visitor-keys: ^3.4.1
-  checksum: 1287979510efb052a6a97c73067ea5d0a40701b29adde87bbe2d3eb1667e39ca55e8129e20e2517fed3da570150e7ef470585228459a8f3e3755f45007a1c662
+  checksum: eb8c149c7a2a77b3f33a5af80c10875c3abd65450f60b8af6db1bfcfa8f101e21c1e56a561c6dc13b848e18148d43469e7cd208506238554fb5395a9ea5a1ab9
   languageName: node
   linkType: hard
 
@@ -13049,6 +13075,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nestjs-pino@npm:3.3.0":
+  version: 3.3.0
+  resolution: "nestjs-pino@npm:3.3.0"
+  peerDependencies:
+    "@nestjs/common": ^8.0.0 || ^9.0.0 || ^10.0.0
+    pino-http: ^6.4.0 || ^7.0.0 || ^8.0.0
+  checksum: ce25bcfe748e2adbff2f32be18b62568100710f3e69043032305483ebaa6f060cf960a5daf1373f34a6944ca63072f607e0e6983e61ebc74ee734c4e9c62c6bd
+  languageName: node
+  linkType: hard
+
 "no-case@npm:^3.0.4":
   version: 3.0.4
   resolution: "no-case@npm:3.0.4"
@@ -13281,7 +13317,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object-hash@npm:^3.0.0":
+"object-hash@npm:3.0.0, object-hash@npm:^3.0.0":
   version: 3.0.0
   resolution: "object-hash@npm:3.0.0"
   checksum: 80b4904bb3857c52cc1bfd0b52c0352532ca12ed3b8a6ff06a90cd209dfda1b95cee059a7625eb9da29537027f68ac4619363491eedb2f5d3dddbba97494fd6c

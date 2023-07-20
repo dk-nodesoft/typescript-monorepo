@@ -6,7 +6,7 @@
   "types": "./src/index.ts",
   "private": true,
   "scripts": {
-    "clean": "tsc --build tsconfig.json --clean && del-cli coverage *.log junit.xml dist *.tsbuildinfo && jest --clearCache",
+    "clean": "rimraf ./dist ./.turbo ./.reports ./.eslintcache",
     "build": "tsc -p tsconfig.build.json",
     "test": "jest --colors --forceExit --onlyChanged",
     "test:ci": "jest --collect-coverage=true --forceExit",

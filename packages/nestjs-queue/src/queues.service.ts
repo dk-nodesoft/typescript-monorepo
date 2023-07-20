@@ -4,7 +4,6 @@ import { createCuid, dayjs, forEachLimit } from '@dk-nodesoft/ts-utils';
 import { getQueueToken } from '@nestjs/bull';
 import { Injectable } from '@nestjs/common';
 import { ModuleRef } from '@nestjs/core';
-import { CONTEXT_REQUEST_ID, USER_ID_SYSTEM } from '@shared/nestjs-core';
 import type { CronRepeatOptions, EveryRepeatOptions, JobOptions, Queue } from 'bull';
 import { plainToClass } from 'class-transformer';
 import { ClsServiceManager } from 'nestjs-cls';
@@ -14,6 +13,14 @@ import { CreateEmittedJobDto, isEmittedJobContext } from './emitted-jobs';
 import { EmittedJobsService } from './emitted-jobs/emitted-jobs.service';
 import { Topics } from './topics/topics';
 import type { Topic, TopicName, TopicPayload } from './types';
+
+// TODO: Fix these
+export const CONTEXT_REQUEST_ID = 'request:requestId';
+export const CONTEXT_OWNER_ID = 'request:ownerId';
+export const CONTEXT_USER_ID = 'request:userId';
+
+export const USER_ID_SYSTEM = '*SYSTEM';
+export const OWNER_ID_SYSTEM = '*SYSTEM';
 
 type TopicEmitOptions<T extends JsonObject = JsonObject, U extends EmittedJobContext = EmittedJobContext> = {
   topic: TopicName;
