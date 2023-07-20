@@ -1,0 +1,41 @@
+{
+  "name": "@dk-nodesoft/nestjs-config",
+  "version": "12.1.0",
+  "description": "Config module for nestjs",
+  "main": "./dist/index.js",
+  "types": "./src/index.ts",
+  "private": true,
+  "scripts": {
+    "clean": "tsc --build tsconfig.json --clean && del-cli coverage *.log junit.xml dist *.tsbuildinfo && jest --clearCache",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "jest --colors --forceExit --onlyChanged",
+    "test:ci": "jest --collect-coverage=true --forceExit",
+    "lint": "eslint ./src --ext .ts",
+    "lint:fix": "eslint ./src --ext .ts --fix",
+    "prettier": "prettier --check ./src",
+    "prettier:fix": "prettier --write ./src"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@dk-nodesoft/ts-utils": "*",
+    "@nestjs/bull": "10.0.1",
+    "@nestjs/common": "10.1.0",
+    "@nestjs/config": "3.0.0",
+    "@nestjs/core": "10.1.0",
+    "@nestjs/mongoose": "10.0.1",
+    "bull": "4.10.4",
+    "config": "3.3.9",
+    "lodash": "4.17.21",
+    "mongoose": "7.4.0",
+    "reflect-metadata": "0.1.13",
+    "rxjs": "7.8.1",
+    "type-fest": "4.0.0"
+  },
+  "devDependencies": {
+    "@dk-nodesoft/eslint-config": "*",
+    "@dk-nodesoft/jest-config": "*",
+    "@dk-nodesoft/typescript-config": "*",
+    "@types/bull": "4.10.0"
+  }
+}

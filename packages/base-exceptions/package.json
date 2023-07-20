@@ -1,0 +1,37 @@
+{
+  "name": "@dk-nodesoft/base-exceptions",
+  "version": "12.3.0",
+  "description": "Base exception handling",
+  "main": "dist/index.js",
+  "types": "src/index.ts",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "jest --colors --forceExit --onlyChanged",
+    "test:ci": "jest --collect-coverage=true --forceExit",
+    "test:heap": "jest --colors --collect-coverage=true --forceExit --detectOpenHandles --runInBand --logHeapUsage",
+    "lint": "eslint ./src --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts",
+    "lint:fix": "eslint ./src --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --fix",
+    "prettier": "prettier --check ./src",
+    "prettier:fix": "prettier --write ./src",
+    "clean": "rimraf ./dist ./.turbo ./.reports ./.eslintcache"
+  },
+  "author": "",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@dk-nodesoft/base-types": "*",
+    "@dk-nodesoft/ts-utils": "*",
+    "http-status": "1.6.2",
+    "lodash.template": "4.5.0",
+    "type-fest": "4.0.0"
+  },
+  "devDependencies": {
+    "@dk-nodesoft/eslint-config": "*",
+    "@dk-nodesoft/jest-config": "*",
+    "@dk-nodesoft/typescript-config": "*",
+    "@types/lodash.template": "4.5.1"
+  }
+}

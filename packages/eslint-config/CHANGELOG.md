@@ -1,4 +1,4 @@
-#@dk-softdesign/eslint-configs
+#@dk-nodesoft/eslint-configs
 
 ## 1.5.0
 

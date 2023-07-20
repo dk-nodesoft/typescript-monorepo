@@ -1,0 +1,35 @@
+{
+  "name": "@dk-nodesoft/base-types",
+  "version": "12.3.0",
+  "description": "Types and util for everyone",
+  "main": "dist/index.js",
+  "types": "src/index.ts",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "jest --colors --forceExit --onlyChanged",
+    "test:ci": "jest --collect-coverage=true --forceExit",
+    "test:heap": "jest --colors --collect-coverage=true --forceExit --detectOpenHandles --runInBand --logHeapUsage",
+    "lint": "eslint ./src --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts",
+    "lint:fix": "eslint ./src --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --fix",
+    "prettier": "prettier --check ./src",
+    "prettier:fix": "prettier --write ./src",
+    "clean": "rimraf ./dist ./.turbo ./.reports ./.eslintcache"
+  },
+  "author": "",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@dk-nodesoft/ts-utils": "*",
+    "lodash": "4.17.21",
+    "type-fest": "4.0.0",
+    "validator": "13.9.0"
+  },
+  "devDependencies": {
+    "@dk-nodesoft/eslint-config": "*",
+    "@dk-nodesoft/jest-config": "*",
+    "@dk-nodesoft/typescript-config": "*"
+  }
+}
