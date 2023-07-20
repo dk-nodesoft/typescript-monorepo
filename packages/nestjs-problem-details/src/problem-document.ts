@@ -2,7 +2,8 @@ import { BaseException } from '@dk-nodesoft/base-exceptions';
 import tsUtils from '@dk-nodesoft/ts-utils';
 import { HttpException, HttpStatus, Logger } from '@nestjs/common';
 import { defaultHttpErrors } from './constants';
-import type { ErrorDetail, ProblemDetail, ProblemDetailExtras, ProblemDetailInternal } from './types';
+import type { ErrorDetail, ProblemDetailExtras, ProblemDetailInternal } from './types';
+import { ProblemDetail } from './types';
 
 const Terms = {
   unspecified_error: 'An error occurred'
@@ -152,7 +153,7 @@ export class ProblemDocument {
   }
 
   /**
-   * create an instance of ProblemDocument from a nest HttpException
+   * create an instance of ProblemDocument from a BaseException
    */
   static fromBaseException(exception: BaseException): ProblemDocument {
     const status = exception.getStatus();

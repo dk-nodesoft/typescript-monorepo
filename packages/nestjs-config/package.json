@@ -36,6 +36,7 @@
     "@dk-nodesoft/eslint-config": "*",
     "@dk-nodesoft/jest-config": "*",
     "@dk-nodesoft/typescript-config": "*",
-    "@types/bull": "4.10.0"
+    "@types/bull": "4.10.0",
+    "@types/config": "3.3.0"
   }
 }

@@ -6,7 +6,7 @@ import { isMongoId, toIdStringStrict } from '../utils';
 
 export const flattenDocument = (
   doc: Data,
-  newDoc: { [key: string]: string } = {},
+  newDoc: { [key: string]: string | number | boolean } = {},
   nested = false
 ): Record<string, SupportedPrimitives> => {
   forEach(doc, (value: DataValue, key: string) => {
@@ -24,22 +24,16 @@ export const flattenDocument = (
     }
 
     if (isNil(value)) {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
       newDoc[`${key}`] = '';
       return;
     }
 
     if (isDate(value)) {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
       newDoc[`${key}`] = value.toISOString();
       return;
     }
 
     if (isString(value) || isNumber(value) || isBoolean(value)) {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
       newDoc[`${key}`] = value;
       return;
     }

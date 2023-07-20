@@ -46,6 +46,7 @@
     "@dk-nodesoft/eslint-config": "*",
     "@dk-nodesoft/jest-config": "*",
     "@dk-nodesoft/typescript-config": "*",
+    "@types/async": "3.2.20",
     "@types/jest": "29.5.3",
     "@types/lodash": "4.14.195",
     "@types/node": "20.4.2",

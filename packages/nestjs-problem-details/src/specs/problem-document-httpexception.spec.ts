@@ -1,31 +1,15 @@
-/* eslint-disable jest/no-commented-out-tests */
-/* eslint-disable sonarjs/no-duplicate-string */
 /* eslint-disable jest/no-conditional-expect */
 import { isProduction } from '@dk-nodesoft/ts-utils';
 import { BadRequestException, ForbiddenException, HttpStatus } from '@nestjs/common';
+import { OopsErrorException as AdvancedOopsError } from '../exceptions/oops-error.exception';
 import { ProblemDetailException } from '../problem-detail.exception';
 import { ProblemDocument } from '../problem-document';
-import type { ProblemDetailExtras } from '../types';
 
 const INTERNAL_SERVER_ERROR = 'Internal Server Error';
 
 class SimpleOopsError extends ProblemDetailException {
   constructor(message: string) {
     super(message, HttpStatus.INTERNAL_SERVER_ERROR);
-  }
-}
-
-class AdvancedOopsError extends ProblemDetailException {
-  constructor(message: string, extras?: ProblemDetailExtras) {
-    const status = HttpStatus.INTERNAL_SERVER_ERROR;
-    const problemDocument = ProblemDocument.create({
-      status,
-      detail: message,
-      title: 'Oops Error',
-      type: 'oops_error',
-      extras
-    });
-    super(problemDocument, status);
   }
 }
 
@@ -37,12 +21,6 @@ const noFundsProblem = ProblemDocument.create({
   status: HttpStatus.FORBIDDEN,
   extras: { balance: 30 }
 });
-
-// class NoFundsException extends HttpException {
-//   constructor() {
-//     super(HttpException.createBody(noFundsProblem), HttpStatus.FORBIDDEN);
-//   }
-// }
 
 describe('ProblemDocument', () => {
   it('should be defined', () => {
@@ -181,26 +159,4 @@ describe('ProblemDocument', () => {
       }
     });
   });
-
-  // describe('Handle HttpException that throws ProblemDocument', () => {
-  //   it('should correctly handle an http exception thowing a payload with a ProblemDocument', () => {
-  //     const error = new NoFundsException();
-  //     const problemDocument = ProblemDocument.from(error);
-
-  //     expect(problemDocument).toBeDefined();
-
-  //     const response = problemDocument.createResponse();
-  //     expect(response).toBeDefined();
-  //     expect(response.detail).toBe('Your current balance is 30, but the cost is 50.');
-  //     expect(response.type).toBe('out-of-credit');
-  //     expect(response.title).toBe('Out of credit');
-  //     expect(response.status).toBe(HttpStatus.FORBIDDEN);
-
-  //     if (!isProduction()) {
-  //       expect(response.internal).toBeDefined();
-  //     } else {
-  //       expect(response.internal).toBeUndefined();
-  //     }
-  //   });
-  // });
 });

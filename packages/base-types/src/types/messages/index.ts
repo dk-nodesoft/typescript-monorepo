@@ -20,7 +20,7 @@ export type Message = {
 };
 
 /**
- * @TypeGuard
+ * Type guard for Message
  * @param v - value check
  * @returns
  */

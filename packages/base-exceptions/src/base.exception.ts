@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import type { Message, MessageParameters, MessagePrimitive } from '@dk-nodesoft/base-types';
 import type { OptionalExceptFor } from '@dk-nodesoft/ts-utils';
 import { isPlainObject, isPresent, isString } from '@dk-nodesoft/ts-utils';

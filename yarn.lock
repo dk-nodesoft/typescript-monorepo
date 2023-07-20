@@ -1960,6 +1960,7 @@ __metadata:
     "@nestjs/core": 10.1.0
     "@nestjs/mongoose": 10.0.1
     "@types/bull": 4.10.0
+    "@types/config": 3.3.0
     bull: 4.10.4
     config: 3.3.9
     lodash: 4.17.21
@@ -2056,6 +2057,7 @@ __metadata:
     "@dk-nodesoft/jest-config": "*"
     "@dk-nodesoft/typescript-config": "*"
     "@paralleldrive/cuid2": 2.2.1
+    "@types/async": 3.2.20
     "@types/jest": 29.5.3
     "@types/lodash": 4.14.195
     "@types/node": 20.4.2
@@ -3888,6 +3890,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/async@npm:3.2.20":
+  version: 3.2.20
+  resolution: "@types/async@npm:3.2.20"
+  checksum: 880ac312f097d3ef98da175b23dc6d29dd0014af55789b3f534dacd0fcd0fb202fdefc732d9b10e4bc93e40823cfe279bb19033cb863f4e27c032e50cd7d9a8e
+  languageName: node
+  linkType: hard
+
 "@types/babel__core@npm:^7.0.0, @types/babel__core@npm:^7.1.14":
   version: 7.20.1
   resolution: "@types/babel__core@npm:7.20.1"
@@ -3954,6 +3963,13 @@ __metadata:
   dependencies:
     bull: "*"
   checksum: 1f8cd1a084a7e67b208384381c6baee940b256fbb651daafcb463d818174a44421212a55a317784d6cfae1b0c26e6ac623ed4ff7703d5c3938245af1930e3596
+  languageName: node
+  linkType: hard
+
+"@types/config@npm:3.3.0":
+  version: 3.3.0
+  resolution: "@types/config@npm:3.3.0"
+  checksum: d9485041cfa05864d3b8095cf7b44fae910887f6782dc43ab1ba4ea78d9cdf4a8c9d697557318ede2b4b63a05b7f91e8571b8dbe048ad024e709d9e51e0487d8
   languageName: node
   linkType: hard
 

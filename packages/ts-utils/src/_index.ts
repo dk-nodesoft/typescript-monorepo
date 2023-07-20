@@ -22,7 +22,7 @@ export * from './stringFns';
 export * as stringFns from './stringFns';
 export * from './typeguards';
 export * as typeguards from './typeguards';
-export type { Primitive } from './types';
+export type { HTTPMethod, Primitive } from './types';
 export type { OptionalExceptFor, PathInto, TypeGuard, UnPromisify } from './utility-types';
 export * from './validators';
 export * as validators from './validators';
