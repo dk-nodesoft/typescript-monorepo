@@ -1877,14 +1877,14 @@ __metadata:
     "@testing-library/react": 14.0.0
     "@testing-library/user-event": 14.4.3
     "@types/jest": 29.5.3
-    "@types/node": 20.4.2
+    "@types/node": 20.4.4
     "@types/prettier": 2.7.3
     "@types/react": 18.2.15
     "@types/react-dom": 18.2.7
     "@typescript-eslint/eslint-plugin": 6.1.0
     "@typescript-eslint/parser": 6.1.0
     eslint: 8.45.0
-    eslint-config-next: 13.4.10
+    eslint-config-next: 13.4.12
     eslint-config-prettier: 8.8.0
     eslint-config-turbo: 1.10.9
     eslint-import-resolver-typescript: 3.5.5
@@ -2081,7 +2081,7 @@ __metadata:
     "@types/async": 3.2.20
     "@types/jest": 29.5.3
     "@types/lodash": 4.14.195
-    "@types/node": 20.4.2
+    "@types/node": 20.4.4
     async: 3.2.4
     cross-env: 7.0.3
     dayjs: 1.11.9
@@ -2112,7 +2112,7 @@ __metadata:
     "@dk-nodesoft/eslint-config": "*"
     "@dk-nodesoft/jest-config": "*"
     "@dk-nodesoft/typescript-config": "*"
-    "@types/node": 20.4.2
+    "@types/node": 20.4.4
     "@types/supertest": 2.0.12
     "@typescript-eslint/eslint-plugin": 6.1.0
     "@typescript-eslint/parser": 6.1.0
@@ -3275,12 +3275,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:13.4.10":
-  version: 13.4.10
-  resolution: "@next/eslint-plugin-next@npm:13.4.10"
+"@next/eslint-plugin-next@npm:13.4.12":
+  version: 13.4.12
+  resolution: "@next/eslint-plugin-next@npm:13.4.12"
   dependencies:
     glob: 7.1.7
-  checksum: f14b99eb5d33b6ede9666ffafb596ee6be52157fc87b59d10d94e44b1e9836099ad450a67558c2aecf09c84b55f65a33c9254ab72df33f55f7cc9f4abee7b38c
+  checksum: a20cf430efe7602b819e69d826c33659a9c2cfa7c6162f63d91b607ff6ac9da0e79ff27f38cebd79117500640329bd107521b4874e6a2d009ddafab762885c82
   languageName: node
   linkType: hard
 
@@ -4137,10 +4137,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:20.4.2, @types/node@npm:^20.4.2":
+"@types/node@npm:*":
   version: 20.4.2
   resolution: "@types/node@npm:20.4.2"
   checksum: 99e544ea7560d51f01f95627fc40394c24a13da8f041121a0da13e4ef0a2aa332932eaf9a5e8d0e30d1c07106e96a183be392cbba62e8cf0bf6a085d5c0f4149
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:20.4.4, @types/node@npm:^20.4.4":
+  version: 20.4.4
+  resolution: "@types/node@npm:20.4.4"
+  checksum: 43f3c4a8acc38ae753e15a0e79bae0447d255b3742fa87f8e065d7b9d20ecb0e03d6c5b46c00d5d26f4552160381a00255f49205595a8ee48c2423e00263c930
   languageName: node
   linkType: hard
 
@@ -7797,11 +7804,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:13.4.10":
-  version: 13.4.10
-  resolution: "eslint-config-next@npm:13.4.10"
+"eslint-config-next@npm:13.4.12":
+  version: 13.4.12
+  resolution: "eslint-config-next@npm:13.4.12"
   dependencies:
-    "@next/eslint-plugin-next": 13.4.10
+    "@next/eslint-plugin-next": 13.4.12
     "@rushstack/eslint-patch": ^1.1.3
     "@typescript-eslint/parser": ^5.42.0
     eslint-import-resolver-node: ^0.3.6
@@ -7816,7 +7823,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: d555e077e5045f045e5bdab58429b2245993a0e28d3030209766558a6d32ae165496030cafbab8e6aaf714947d895ee30d1ecdb49263abdb23b6889a333ea714
+  checksum: 633eccf920d94a1248c089ec08c52245d863b1b45d68be04deff93c0a0d60373c96610d69d005909b2c9beb81b0af7a12a777d03277cd4db60233e99ac8ef281
   languageName: node
   linkType: hard
 
@@ -12363,7 +12370,7 @@ __metadata:
     "@testing-library/react": ^14.0.0
     "@testing-library/user-event": ^14.4.3
     "@types/jest": ^29.5.3
-    "@types/node": ^20.4.2
+    "@types/node": ^20.4.4
     "@types/react": ^18.2.15
     "@types/react-dom": ^18.2.7
     axios: 1.4.0

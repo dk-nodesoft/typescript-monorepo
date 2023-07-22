@@ -40,7 +40,7 @@
     "@dk-nodesoft/eslint-config": "*",
     "@dk-nodesoft/jest-config": "*",
     "@dk-nodesoft/typescript-config": "*",
-    "@types/node": "20.4.2",
+    "@types/node": "20.4.4",
     "@types/supertest": "2.0.12",
     "@typescript-eslint/eslint-plugin": "6.1.0",
     "@typescript-eslint/parser": "6.1.0",
