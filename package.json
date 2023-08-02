@@ -16,8 +16,8 @@
     "pre-commit": "yarn lint-staged-files",
     "pre-push": "yarn run build && yarn run test",
     "dependencies:upgrade": "yarn upgrade-interactive",
-    "clean:repo": "turbo run clean && rimraf yarn.lock .yarn/cache junit.xml package-lock.json **/node_modules .cache && yarn && yarn build",
-    "clean": "turbo run clean && rimraf junit.xml package-lock.json **/node_modules .cache && yarn && yarn build"
+    "clean:repo": "turbo run clean && rimraf yarn.lock .yarn/cache junit.xml **/node_modules .cache && yarn && yarn build",
+    "clean": "turbo run clean && rimraf junit.xml yarn.lock **/node_modules .cache && yarn && yarn build"
   },
   "keywords": [
     "turbo",
