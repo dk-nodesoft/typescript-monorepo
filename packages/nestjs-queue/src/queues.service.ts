@@ -31,7 +31,10 @@ type TopicEmitOptions<T extends JsonObject = JsonObject, U extends EmittedJobCon
 
 @Injectable()
 export class QueuesService {
-  constructor(private queueEmittedJobsService: EmittedJobsService, private moduleRef: ModuleRef) {}
+  constructor(
+    private queueEmittedJobsService: EmittedJobsService,
+    private moduleRef: ModuleRef
+  ) {}
 
   private resolveContext(payload: any, context?: EmittedJobContext): EmittedJobContext {
     const cls = ClsServiceManager.getClsService();

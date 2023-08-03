@@ -1,5 +1,6 @@
 import httpStatus from 'http-status';
-import { BaseException, BaseExceptionDetails } from '../base.exception';
+import type { BaseExceptionDetails } from '../base.exception';
+import { BaseException } from '../base.exception';
 
 export class InstanceExistException extends BaseException {
   constructor(details: BaseExceptionDetails) {

@@ -2,8 +2,7 @@ import { BaseException } from '@dk-nodesoft/base-exceptions';
 import tsUtils from '@dk-nodesoft/ts-utils';
 import { HttpException, HttpStatus, Logger } from '@nestjs/common';
 import { defaultHttpErrors } from './constants';
-import type { ErrorDetail, ProblemDetailExtras, ProblemDetailInternal } from './types';
-import { ProblemDetail } from './types';
+import type { ProblemDetail, ErrorDetail, ProblemDetailExtras, ProblemDetailInternal } from './types';
 
 const Terms = {
   unspecified_error: 'An error occurred'

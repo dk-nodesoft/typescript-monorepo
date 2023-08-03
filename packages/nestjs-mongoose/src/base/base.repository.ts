@@ -5,8 +5,14 @@ import type { CuidString } from '@dk-nodesoft/ts-utils';
 import { createCuid, isCuidString } from '@dk-nodesoft/ts-utils';
 import { Logger } from '@nestjs/common';
 import type { Types } from 'mongoose';
-import type { MongooseInstance, MongooseInternal, MongooseSelectInstance, ObjectWithIdInternal } from '../types';
-import { ID_NAME_INTERNAL, MongooseModel } from '../types';
+import type {
+  MongooseInstance,
+  MongooseInternal,
+  MongooseSelectInstance,
+  ObjectWithIdInternal,
+  MongooseModel
+} from '../types';
+import { ID_NAME_INTERNAL } from '../types';
 import { toObjectIdStrict } from '../utils';
 import { createSelectFromModel } from '../utils/model';
 

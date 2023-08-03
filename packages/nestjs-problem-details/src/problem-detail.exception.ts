@@ -1,4 +1,5 @@
-import { HttpException, HttpStatus } from '@nestjs/common';
+import type { HttpStatus } from '@nestjs/common';
+import { HttpException } from '@nestjs/common';
 import { ProblemDocument } from './problem-document';
 import type { ErrorDetail } from './types';
 

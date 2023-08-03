@@ -1,4 +1,5 @@
-import { BaseException, BaseExceptionOptions } from '@dk-nodesoft/base-exceptions';
+import type { BaseExceptionOptions } from '@dk-nodesoft/base-exceptions';
+import { BaseException } from '@dk-nodesoft/base-exceptions';
 import httpStatus from 'http-status';
 import { ProblemDocument } from '../problem-document';
 import type { ProblemDetail } from '../types';
