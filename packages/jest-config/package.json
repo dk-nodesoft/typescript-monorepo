@@ -42,7 +42,7 @@
     "get-tsconfig": "4.6.2",
     "jest-environment-jsdom": "29.6.2",
     "jest-junit": "16.0.0",
-    "mongoose": "7.4.1",
+    "mongoose": "7.4.2",
     "reflect-metadata": "0.1.13",
     "rxjs": "7.8.1",
     "ts-jest": "29.1.1"
