@@ -36,11 +36,11 @@
     "clean": "rimraf ./dist ./.turbo ./.reports ./.eslintcache"
   },
   "dependencies": {
-    "@paralleldrive/cuid2": "2.2.1",
+    "@paralleldrive/cuid2": "2.2.2",
     "async": "3.2.4",
     "dayjs": "1.11.9",
     "lodash": "4.17.21",
-    "type-fest": "4.1.0"
+    "type-fest": "4.2.0"
   },
   "devDependencies": {
     "@dk-nodesoft/eslint-config": "*",
@@ -48,11 +48,11 @@
     "@dk-nodesoft/typescript-config": "*",
     "@types/async": "3.2.20",
     "@types/jest": "29.5.3",
-    "@types/lodash": "4.14.196",
-    "@types/node": "20.4.6",
+    "@types/lodash": "4.14.197",
+    "@types/node": "20.4.9",
     "cross-env": "7.0.3",
     "eslint": "8.46.0",
-    "get-tsconfig": "4.6.2",
+    "get-tsconfig": "4.7.0",
     "jest": "29.6.2",
     "rimraf": "5.0.1",
     "ts-jest": "29.1.1",

@@ -1,6 +1,6 @@
 import type { Data, ObjectWithId, RepositoryInstance } from '@dk-nodesoft/base-types';
 import type { MongooseInternal } from '@dk-nodesoft/nestjs-mongoose';
-import type { CronRepeatOptions, EveryRepeatOptions } from 'bull';
+import type { CronRepeatOptions, EveryRepeatOptions, JobOptions } from 'bull';
 import type { Document } from 'mongoose';
 
 export enum EmittedJobStatus {
@@ -23,7 +23,7 @@ export type EmittedJobError = {
   stack: string;
 };
 
-export type EmittedJobRepeat = CronRepeatOptions | EveryRepeatOptions;
+export type EmittedJobRepeat = JobOptions['repeat'];
 
 export type EmittedJob = RepositoryInstance &
   ObjectWithId & {

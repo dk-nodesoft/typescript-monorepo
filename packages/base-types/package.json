@@ -24,8 +24,8 @@
   "dependencies": {
     "@dk-nodesoft/ts-utils": "*",
     "lodash": "4.17.21",
-    "type-fest": "4.1.0",
-    "validator": "13.9.0"
+    "type-fest": "4.2.0",
+    "validator": "13.11.0"
   },
   "devDependencies": {
     "@dk-nodesoft/eslint-config": "*",
