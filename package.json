@@ -4,6 +4,8 @@
   "description": "Monorepo with a collection of packages and servers",
   "private": true,
   "scripts": {
+    "build:nest-upload": "turbo run build --filter=nest-upload",
+    "nest-upload": "turbo run dev --filter=nest-upload",
     "build": "turbo build",
     "lint-staged-files": "lint-staged --allow-empty",
     "dev": "turbo run dev",
@@ -69,5 +71,5 @@
     "turbo": "1.10.13",
     "typescript": "5.2.2"
   },
-  "packageManager": "yarn@3.6.1"
+  "packageManager": "yarn@3.6.3"
 }
