@@ -24,9 +24,9 @@
   "dependencies": {
     "@dk-nodesoft/base-types": "*",
     "@dk-nodesoft/ts-utils": "*",
-    "http-status": "1.6.2",
+    "http-status": "1.7.0",
     "lodash.template": "4.5.0",
-    "type-fest": "4.2.0"
+    "type-fest": "4.3.1"
   },
   "devDependencies": {
     "@dk-nodesoft/eslint-config": "*",
