@@ -2055,6 +2055,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@dk-nodesoft/nestjs-upload@workspace:servers/nestjs-upload":
+  version: 0.0.0-use.local
+  resolution: "@dk-nodesoft/nestjs-upload@workspace:servers/nestjs-upload"
+  dependencies:
+    "@dk-nodesoft/eslint-config": "*"
+    "@dk-nodesoft/jest-config": "*"
+    "@dk-nodesoft/nestjs-config": "*"
+    "@dk-nodesoft/ts-utils": "*"
+    "@dk-nodesoft/typescript-config": "*"
+    "@nestjs/common": 10.2.4
+    "@nestjs/core": 10.2.4
+    reflect-metadata: 0.1.13
+    rxjs: 7.8.1
+    zod: 3.22.2
+  languageName: unknown
+  linkType: soft
+
 "@dk-nodesoft/storage-core@workspace:packages/nestjs-storage":
   version: 0.0.0-use.local
   resolution: "@dk-nodesoft/storage-core@workspace:packages/nestjs-storage"
