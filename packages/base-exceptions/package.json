@@ -24,14 +24,14 @@
   "dependencies": {
     "@dk-nodesoft/base-types": "*",
     "@dk-nodesoft/ts-utils": "*",
-    "http-status": "1.7.0",
+    "http-status": "1.7.3",
     "lodash.template": "4.5.0",
-    "type-fest": "4.4.0"
+    "type-fest": "4.7.1"
   },
   "devDependencies": {
     "@dk-nodesoft/eslint-config": "*",
     "@dk-nodesoft/jest-config": "*",
     "@dk-nodesoft/typescript-config": "*",
-    "@types/lodash.template": "4.5.1"
+    "@types/lodash.template": "4.5.3"
   }
 }
