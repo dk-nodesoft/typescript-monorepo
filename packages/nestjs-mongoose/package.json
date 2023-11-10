@@ -26,18 +26,18 @@
     "@dk-nodesoft/base-types": "*",
     "@dk-nodesoft/nestjs-config": "*",
     "@dk-nodesoft/ts-utils": "*",
-    "@nestjs/common": "10.2.4",
-    "@nestjs/core": "10.2.4",
+    "@nestjs/common": "10.2.7",
+    "@nestjs/core": "10.2.7",
     "@nestjs/mongoose": "10.0.1",
     "async": "3.2.4",
     "class-transformer": "0.5.1",
     "class-validator": "0.14.0",
     "lodash": "4.17.21",
     "mongodb": "5.8.1",
-    "mongoose": "7.5.0",
+    "mongoose": "7.5.2",
     "reflect-metadata": "0.1.13",
     "rxjs": "7.8.1",
-    "type-fest": "4.3.1"
+    "type-fest": "4.4.0"
   },
   "devDependencies": {
     "@dk-nodesoft/eslint-config": "*",

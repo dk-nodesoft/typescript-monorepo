@@ -19,6 +19,6 @@
   },
   "devDependencies": {
     "@tsconfig/node16": "16.1.1",
-    "@tsconfig/node18": "18.2.1"
+    "@tsconfig/node18": "18.2.2"
   }
 }

@@ -20,8 +20,8 @@ module.exports = {
   },
 
   testTimeout: 240000,
-  globalSetup: '<rootDir>/specs/globalSetup.ts',
-  globalTeardown: '<rootDir>/specs/globalTeardown.ts',
+  // globalSetup: '<rootDir>/specs/globalSetup.ts',
+  // globalTeardown: '<rootDir>/specs/globalTeardown.ts',
   maxConcurrency: 1,
   maxWorkers: 1
 };
