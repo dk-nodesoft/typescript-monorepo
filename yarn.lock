@@ -2057,7 +2057,7 @@ __metadata:
     "@nestjs/mongoose": "npm:10.0.2"
     "@types/bull": "npm:4.10.0"
     "@types/config": "npm:3.3.3"
-    bull: "npm:4.11.4"
+    bull: "npm:4.11.5"
     config: "npm:3.3.9"
     lodash: "npm:4.17.21"
     mongoose: "npm:8.0.0"
@@ -2166,7 +2166,7 @@ __metadata:
     "@nestjs/mongoose": "npm:10.0.2"
     "@types/object-hash": "npm:3.0.6"
     async: "npm:3.2.5"
-    bull: "npm:4.11.4"
+    bull: "npm:4.11.5"
     class-transformer: "npm:0.5.1"
     class-validator: "npm:0.14.0"
     date-fns: "npm:2.30.0"
@@ -2256,7 +2256,7 @@ __metadata:
     is-ci: "npm:3.0.1"
     jest: "npm:29.7.0"
     jest-junit: "npm:16.0.0"
-    lint-staged: "npm:15.0.2"
+    lint-staged: "npm:15.1.0"
     nodemon: "npm:3.0.1"
     prettier: "npm:3.0.3"
     prettier-plugin-organize-imports: "npm:3.2.4"
@@ -6493,9 +6493,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bull@npm:4.11.4":
-  version: 4.11.4
-  resolution: "bull@npm:4.11.4"
+"bull@npm:4.11.5":
+  version: 4.11.5
+  resolution: "bull@npm:4.11.5"
   dependencies:
     cron-parser: "npm:^4.2.1"
     get-port: "npm:^5.1.1"
@@ -6504,7 +6504,7 @@ __metadata:
     msgpackr: "npm:^1.5.2"
     semver: "npm:^7.5.2"
     uuid: "npm:^8.3.0"
-  checksum: c69257376c5de2d491989c9d6e284617b2a7e8ebafdc747e4d3ee884fae0cd0fb432c7ab71ba98ef2146ca0ff57542e5ac4dfc844dc2c44c2b4e72ca8f543b93
+  checksum: a10b13a10d7cf706c84fec493e0ac838e6d7d424efe22fb8e0a4df20ce56ebba92122dcdf9f0ac796d25a9e9db0dca7978f2d03714a630fd145406d738ab41e4
   languageName: node
   linkType: hard
 
@@ -13150,9 +13150,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:15.0.2":
-  version: 15.0.2
-  resolution: "lint-staged@npm:15.0.2"
+"lint-staged@npm:15.1.0":
+  version: 15.1.0
+  resolution: "lint-staged@npm:15.1.0"
   dependencies:
     chalk: "npm:5.3.0"
     commander: "npm:11.1.0"
@@ -13163,10 +13163,10 @@ __metadata:
     micromatch: "npm:4.0.5"
     pidtree: "npm:0.6.0"
     string-argv: "npm:0.3.2"
-    yaml: "npm:2.3.3"
+    yaml: "npm:2.3.4"
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 79c6487405dff2670bcf7e4721f06705bd33b4fef88d77988565fb9cb2f62608231cbbc706da0ae150b49d0fab447be083c4561164670ec7f407fd183ce27615
+  checksum: 77aacab303ebab8ef6781833d35d82405b73f0e3e8f8c585cdd95b0e1f42a638a12e853d7ef6227a85d77ed2ba233f92b0499124696a6872569c508e04d25ce3
   languageName: node
   linkType: hard
 
@@ -20118,10 +20118,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yaml@npm:2.3.3":
-  version: 2.3.3
-  resolution: "yaml@npm:2.3.3"
-  checksum: 3b1a974b9d3672c671d47099a41c0de77b7ff978d0849aa55a095587486e82cd072321d19f2b4c791a367f766310b5a82dff098839b0f4ddcbbbe477f82dfb07
+"yaml@npm:2.3.4":
+  version: 2.3.4
+  resolution: "yaml@npm:2.3.4"
+  checksum: f8207ce43065a22268a2806ea6a0fa3974c6fde92b4b2fa0082357e487bc333e85dc518910007e7ac001b532c7c84bd3eccb6c7757e94182b564028b0008f44b
   languageName: node
   linkType: hard
 
