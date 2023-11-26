@@ -62,10 +62,10 @@ type BasicTypeDefType<T extends BasicTypeDef> =
 type TypeDefType<TTypeDef extends unknown> = TTypeDef extends Guard<infer V>
   ? V
   : TTypeDef extends BasicTypeDef
-  ? BasicTypeDefType<TTypeDef>
-  : TTypeDef extends ObjectTypeDef | TupleTypeDef
-  ? { [key in keyof TTypeDef]: TypeDefType<TTypeDef[key]> }
-  : never;
+    ? BasicTypeDefType<TTypeDef>
+    : TTypeDef extends ObjectTypeDef | TupleTypeDef
+      ? { [key in keyof TTypeDef]: TypeDefType<TTypeDef[key]> }
+      : never;
 
 export type Guard<T extends unknown> = {
   (value: unknown): value is T;

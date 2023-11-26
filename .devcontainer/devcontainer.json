@@ -6,7 +6,7 @@
   "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
   "features": {
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
-  }
+  },
 
   // Features to add to the dev container. More info: https://containers.dev/features.
   // "features": {},
@@ -18,7 +18,24 @@
   // "postCreateCommand": "yarn install",
 
   // Configure tool-specific properties.
-  // "customizations": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "aaron-bond.better-comments",
+        "ms-azuretools.vscode-docker",
+        "hediet.vscode-drawio",
+        "dsznajder.es7-react-js-snippets",
+        "dbaeumer.vscode-eslint",
+        "donjayamanne.githistory",
+        "eamodio.gitlens",
+        "visualstudioexptteam.vscodeintellicode",
+        "ritwickdey.liveserver",
+        "zaaack.markdown-editor",
+        "christian-kohler.path-intellisense"
+      ]
+    }
+  }
 
   // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
   // "remoteUser": "root"

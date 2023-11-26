@@ -24,8 +24,8 @@
   "dependencies": {
     "@dk-nodesoft/nestjs-config": "*",
     "@dk-nodesoft/ts-utils": "*",
-    "@nestjs/common": "10.2.8",
-    "@nestjs/core": "10.2.8",
+    "@nestjs/common": "10.2.10",
+    "@nestjs/core": "10.2.10",
     "reflect-metadata": "0.1.13",
     "rxjs": "7.8.1",
     "zod": "3.22.4"

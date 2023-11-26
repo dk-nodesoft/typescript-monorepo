@@ -5,6 +5,6 @@ export type PathInto<T extends Record<string, any>> = keyof {
   [K in keyof T as T[K] extends Primitive
     ? K
     : T[K] extends Record<string, any>
-    ? `${K & string}.${PathInto<T[K]> & string}`
-    : never]: any;
+      ? `${K & string}.${PathInto<T[K]> & string}`
+      : never]: any;
 };
