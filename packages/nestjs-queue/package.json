@@ -31,13 +31,13 @@
     "class-transformer": "0.5.1",
     "class-validator": "0.14.0",
     "date-fns": "2.30.0",
-    "mongoose": "8.0.1",
+    "mongoose": "8.0.3",
     "mongoose-lean-virtuals": "0.9.1",
     "nestjs-cls": "3.6.0",
     "object-hash": "3.0.0",
-    "reflect-metadata": "0.1.13",
+    "reflect-metadata": "0.1.14",
     "rxjs": "7.8.1",
-    "type-fest": "4.8.2"
+    "type-fest": "4.8.3"
   },
   "devDependencies": {
     "@dk-nodesoft/eslint-config": "*",

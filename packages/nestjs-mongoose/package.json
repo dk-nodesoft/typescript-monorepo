@@ -34,10 +34,10 @@
     "class-validator": "0.14.0",
     "lodash": "4.17.21",
     "mongodb": "6.3.0",
-    "mongoose": "8.0.1",
-    "reflect-metadata": "0.1.13",
+    "mongoose": "8.0.3",
+    "reflect-metadata": "0.1.14",
     "rxjs": "7.8.1",
-    "type-fest": "4.8.2"
+    "type-fest": "4.8.3"
   },
   "devDependencies": {
     "@dk-nodesoft/eslint-config": "*",
