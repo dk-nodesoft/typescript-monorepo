@@ -20,17 +20,17 @@
   "dependencies": {
     "@dk-nodesoft/ts-utils": "*",
     "@nestjs/bull": "10.0.1",
-    "@nestjs/common": "10.2.10",
+    "@nestjs/common": "10.3.0",
     "@nestjs/config": "3.1.1",
-    "@nestjs/core": "10.2.10",
+    "@nestjs/core": "10.3.0",
     "@nestjs/mongoose": "10.0.2",
-    "bull": "4.11.5",
+    "bull": "4.12.0",
     "config": "3.3.9",
     "lodash": "4.17.21",
     "mongoose": "8.0.3",
-    "reflect-metadata": "0.1.14",
+    "reflect-metadata": "0.2.1",
     "rxjs": "7.8.1",
-    "type-fest": "4.8.3"
+    "type-fest": "4.9.0"
   },
   "devDependencies": {
     "@dk-nodesoft/eslint-config": "*",
