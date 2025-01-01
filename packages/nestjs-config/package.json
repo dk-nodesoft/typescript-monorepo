@@ -28,7 +28,7 @@
     "config": "3.3.12",
     "lodash": "4.17.21",
     "mongoose": "8.9.3",
-    "reflect-metadata": "0.2.1",
+    "reflect-metadata": "0.2.2",
     "rxjs": "7.8.1",
     "type-fest": "4.26.0"
   },

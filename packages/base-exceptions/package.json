@@ -24,7 +24,7 @@
   "dependencies": {
     "@dk-nodesoft/base-types": "*",
     "@dk-nodesoft/ts-utils": "*",
-    "http-status": "1.7.3",
+    "http-status": "2.0.0",
     "lodash.template": "4.5.0",
     "type-fest": "4.26.0"
   },

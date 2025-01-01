@@ -1,7 +1,7 @@
 import type { Message, MessageParameters, MessagePrimitive } from '@dk-nodesoft/base-types';
 import type { OptionalExceptFor } from '@dk-nodesoft/ts-utils';
 import { isPlainObject, isPresent, isString } from '@dk-nodesoft/ts-utils';
-import httpStatus from 'http-status';
+import httpStatus from 'http-status/dist';
 import template from 'lodash.template';
 
 export type BaseExceptionDetails = MessagePrimitive | object | undefined;
@@ -145,7 +145,7 @@ export class BaseException extends Error {
       return exceptionName;
     }
 
-    return httpStatus[this.status] as string;
+    return (httpStatus as any)[this.status] as string;
   }
 
   /**

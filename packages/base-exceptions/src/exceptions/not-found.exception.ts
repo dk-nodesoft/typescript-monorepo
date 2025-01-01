@@ -1,5 +1,5 @@
 import type { MessageParameters, MessagePrimitive } from '@dk-nodesoft/base-types';
-import httpStatus from 'http-status';
+import httpStatus from 'http-status/dist';
 import type { BaseExceptionDetails } from '../base.exception';
 import { BaseException } from '../base.exception';
 
